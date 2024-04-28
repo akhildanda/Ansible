@@ -1,0 +1,9 @@
+- name: variables
+  hosts: localhost
+  vars:
+   Name: "Akhil"
+   Schedule: "evening"
+  tasks: 
+   - name: print information
+     ansible.builtin.debug:
+     msg: " Hi I am {{Name}} and will be joining meeting today {{Schedule}}"
