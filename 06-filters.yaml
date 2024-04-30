@@ -25,7 +25,7 @@
      msg: "{{ greeting | lower }}"   
 
 - name : min and max age
-  hosts: local host
+  hosts: localhost
   vars:
    ages: [20, 30, 40, 55]
   tasks:
