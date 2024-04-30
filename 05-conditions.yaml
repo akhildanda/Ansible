@@ -1,0 +1,16 @@
+- name: validate number
+  hosts: localhost
+  vars_promt:
+  - name: number
+    promt: please enter number
+    private: no
+  tasks: 
+    - name: number is less than 50
+      ansible.builtin.debug:
+       msg: "Given number: {{number}}, is less than 50"
+      when: number | int < 50
+
+    - name: number greater than or equal to 50  
+      ansible.builtin.debug:
+       msg: "Given number {{number}}, is greater than or eqaul to 50"
+      when: number | int > 50
