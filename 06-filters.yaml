@@ -1,0 +1,6 @@
+- name: using filters
+  hosts: localhost
+  tasks:
+  - name : print value
+    ansible.builtin.debug:
+     msg: ("Hello {{name | default('Akhil')}}"
