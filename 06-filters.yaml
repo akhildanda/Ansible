@@ -3,4 +3,11 @@
   tasks:
   - name : print value
     ansible.builtin.debug:
-     msg: "Hello {{ name | default('Akhil')}}"
+     msg: "Hello {{ name | default('Akhil')}}" 
+
+- name: convert into uppercase
+  hosts: localhost
+  tasks:
+  - name: Uppercase
+    ansible.builtin.debug:
+     msg: "Hello Good Morning"     
